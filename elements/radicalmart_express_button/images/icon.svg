@@ -1,0 +1,14 @@
+<!--
+  - @package     RadicalMart Express Package
+  - @subpackage  plg_system_radicalmart_express_elements
+  - @version     0.1.0
+  - @author      Delo Design - delo-design.ru
+  - @copyright   Copyright (c) 2021 Delo Design. All rights reserved.
+  - @license     GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
+  - @link        https://delo-design.ru/
+  -->
+
+<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+    <path fill="none" stroke="#444" stroke-width="1.8" d="M11,8l10.882,8.611l-2.902,1.681l3.209,5.965 l-3.98,2.146l-3.207-5.965l-2.9,1.681L11,8z" />
+    <polyline fill="none" stroke="#444" stroke-width="2" points="8,18 2,18 2,3 28,3 28,18 25,18 " />
+</svg>

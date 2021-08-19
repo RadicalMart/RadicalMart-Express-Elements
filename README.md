@@ -1,2 +1,2 @@
-# plg_system_radicalmart_express_elements
-Radicalmart Elements for YOOtheme Pro builder 
+# RadicalMart Express - Elements
+Radicalmart Express Elements for YOOtheme Pro builder 

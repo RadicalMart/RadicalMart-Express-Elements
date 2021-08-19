@@ -1,0 +1,85 @@
+{
+	"@import": "./element.php",
+	"name": "radicalmart_express_button",
+	"title": "RME - Button",
+	"group": "RadicalMart Express",
+	"icon": "${url:images/icon.svg}",
+	"iconSmall": "${url:images/iconSmall.svg}",
+	"element": true,
+	"width": 500,
+	"templates": {
+		"render": "./templates/template.php"
+	},
+	"fields": {
+		"product": {
+			"type": "text",
+			"label": "Product",
+			"description": "Product id",
+			"default": ""
+		},
+		"text": {
+			"type": "text",
+			"label": "Text",
+			"description": "Button text. Can use: <code>{product.id}</code> <code>{product.title}</code> <code>{product.price}</code>",
+			"default": "COM_RADICALMART_EXPRESS_DISPLAY_BUTTON_PRODUCT_TEXT"
+		},
+		"button_style": {
+			"label": "Style",
+			"description": "Set the button style.",
+			"type": "select",
+			"default": "primary",
+			"options": {
+				"Default": "default",
+				"Primary": "primary",
+				"Secondary": "secondary",
+				"Danger": "danger",
+				"Text": "text",
+				"Link": "",
+				"Link Muted": "link-muted",
+				"Link Text": "link-text"
+			}
+		},
+		"button_size": {
+			"label": "Size",
+			"type": "select",
+			"default": "",
+			"options": {
+				"Small": "small",
+				"Default": "",
+				"Large": "large"
+			}
+		},
+		"css": {
+			"label": "CSS",
+			"description": "Enter your own custom CSS. The following selectors will be prefixed automatically for this element: <code>.el-element</code>",
+			"type": "editor",
+			"editor": "code",
+			"mode": "css",
+			"attrs": {
+				"debounce": 500
+			}
+		}
+	},
+	"fieldset": {
+		"default": {
+			"type": "tabs",
+			"fields": [
+				{
+					"title": "Content",
+					"fields": [
+						"product",
+						"text"
+					]
+				},
+				{
+					"title": "Settings",
+					"fields": [
+						"button_style",
+						"button_size",
+						"css"
+					]
+				}
+			]
+		}
+	}
+}
