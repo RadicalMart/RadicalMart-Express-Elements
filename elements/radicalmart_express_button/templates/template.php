@@ -2,7 +2,7 @@
 /*
  * @package     RadicalMart Express Package
  * @subpackage  plg_system_radicalmart_express_elements
- * @version     __DEPLOY_VERSION__
+ * @version     1.0.0
  * @author      Delo Design - delo-design.ru
  * @copyright   Copyright (c) 2021 Delo Design. All rights reserved.
  * @license     GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
@@ -16,15 +16,28 @@ use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 
-HTMLHelper::script('com_radicalmart_express/radicalmart_express.min.js', array('version' => 'auto', 'relative' => true));
-HTMLHelper::script('com_radicalmart_express/axios.min.js', array('version' => 'auto', 'relative' => true));
-
-HTMLHelper::_('behavior.formvalidator');
-
 Factory::getLanguage()->load('com_radicalmart_express');
-Factory::getDocument()->addScriptOptions('radicalmart_express', array(
-	'controller' => Route::_('index.php?option=com_radicalmart_express')
-));
+if ($product)
+{
+	HTMLHelper::script('com_radicalmart_express/radicalmart_express.min.js', array('version' => 'auto', 'relative' => true));
+	HTMLHelper::script('com_radicalmart_express/axios.min.js', array('version' => 'auto', 'relative' => true));
+
+	HTMLHelper::_('behavior.formvalidator');
+
+	Text::script('COM_RADICALMART_EXPRESS_ERROR_FORM_FIELD_INVALID');
+	Factory::getDocument()->addScriptOptions('radicalmart_express', array(
+		'controller' => Route::_('index.php?option=com_radicalmart_express')
+	));
+
+	$pid = $product->id;
+}
+else
+{
+	$props['button_style'] = 'danger';
+	$props['text']         = Text::_('COM_RADICALMART_EXPRESS_ERROR_PRODUCT_NOT_FOUND');
+	$pid                   = 0;
+}
+
 
 $el = $this->el('button', [
 
@@ -34,7 +47,7 @@ $el = $this->el('button', [
 		'uk-{button_style: link-\w+}'                                              => ['button_style' => $props['button_style']],
 		'uk-button uk-button-{!button_style: |link-\w+} [uk-button-{button_size}]' => ['button_style' => $props['button_style']],
 	],
-	'radicalmart_express-buy' => [$product->id],
+	'radicalmart_express-buy' => $pid,
 ]);
 
 // Prepare text

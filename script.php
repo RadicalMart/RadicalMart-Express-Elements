@@ -2,7 +2,7 @@
 /*
  * @package     RadicalMart Express Package
  * @subpackage  plg_system_radicalmart_express_elements
- * @version     __DEPLOY_VERSION__
+ * @version     1.0.0
  * @author      Delo Design - delo-design.ru
  * @copyright   Copyright (c) 2021 Delo Design. All rights reserved.
  * @license     GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
@@ -26,7 +26,7 @@ class PlgSystemRadicalMart_Express_ElementsInstallerScript
 	 *
 	 * @return  boolean True on success, False on failure.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  0.1.0
 	 */
 	function postflight($type, $parent)
 	{
@@ -41,7 +41,7 @@ class PlgSystemRadicalMart_Express_ElementsInstallerScript
 	 *
 	 * @param   InstallerAdapter  $parent  Parent object calling object.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  0.1.0
 	 */
 	protected function enablePlugin($parent)
 	{
