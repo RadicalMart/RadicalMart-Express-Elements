@@ -2,7 +2,7 @@
 /*
  * @package     RadicalMart Express Package
  * @subpackage  plg_system_radicalmart_express_elements
- * @version     0.1.0
+ * @version     1.0.0
  * @author      Delo Design - delo-design.ru
  * @copyright   Copyright (c) 2021 Delo Design. All rights reserved.
  * @license     GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
@@ -21,14 +21,14 @@ class plgSystemRadicalMart_Express_Elements extends CMSPlugin
 	 *
 	 * @var  boolean
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  0.1.0
 	 */
 	protected $autoloadLanguage = true;
 
 	/**
 	 * Method to add custom elements loader.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  0.1.0
 	 */
 	public function onAfterInitialise()
 	{

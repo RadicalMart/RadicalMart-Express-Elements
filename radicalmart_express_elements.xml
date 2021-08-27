@@ -7,7 +7,7 @@
 	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>boss@delo-design.ru</authorEmail>
 	<authorUrl>https://delo-design.ru</authorUrl>
-	<version>0.1.0</version>
+	<version>1.0.0</version>
 	<description>PLG_SYSTEM_RADICALMART_EXPRESS_ELEMENTS_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<languages folder="language">
@@ -21,4 +21,9 @@
 		<filename>loader.php</filename>
 		<filename plugin="radicalmart_express_elements">radicalmart_express_elements.php</filename>
 	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="RadicalMart Express - Elements">
+			https://hika.su/update/free/plg_system_radicalmart_express_elements.xml
+		</server>
+	</updateservers>
 </extension>
