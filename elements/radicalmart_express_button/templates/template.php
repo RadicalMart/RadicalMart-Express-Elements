@@ -11,6 +11,7 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Component\ComponentHelper;
 use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
@@ -23,6 +24,11 @@ if ($product)
 	HTMLHelper::script('com_radicalmart_express/axios.min.js', array('version' => 'auto', 'relative' => true));
 
 	HTMLHelper::_('behavior.formvalidator');
+
+	if (ComponentHelper::getParams('com_radicalmart_express')->get('fields_quantity', 'required') === 'required')
+	{
+		HTMLHelper::script('com_radicalmart_express/field-quantity.min.js', array('version' => 'auto', 'relative' => true));
+	}
 
 	Text::script('COM_RADICALMART_EXPRESS_ERROR_FORM_FIELD_INVALID');
 	Factory::getDocument()->addScriptOptions('radicalmart_express', array(
