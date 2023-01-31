@@ -1,7 +1,7 @@
 {
 	"@import": "./element.php",
-	"name": "radicalmart_express_button",
-	"title": "RME - Button",
+	"name": "radicalmart_express_form",
+	"title": "RME - Form",
 	"group": "RadicalMart Express",
 	"icon": "${url:images/icon.svg}",
 	"iconSmall": "${url:images/iconSmall.svg}",
@@ -16,38 +16,6 @@
 			"label": "Product",
 			"description": "Product id",
 			"default": ""
-		},
-		"text": {
-			"type": "text",
-			"label": "Text",
-			"description": "Button text. Can use: <code>{product.id}</code> <code>{product.title}</code> <code>{product.price}</code>",
-			"default": "COM_RADICALMART_EXPRESS_CHECKOUT_PRODUCT_BUTTON"
-		},
-		"button_style": {
-			"label": "Style",
-			"description": "Set the button style.",
-			"type": "select",
-			"default": "primary",
-			"options": {
-				"Default": "default",
-				"Primary": "primary",
-				"Secondary": "secondary",
-				"Danger": "danger",
-				"Text": "text",
-				"Link": "",
-				"Link Muted": "link-muted",
-				"Link Text": "link-text"
-			}
-		},
-		"button_size": {
-			"label": "Size",
-			"type": "select",
-			"default": "",
-			"options": {
-				"Small": "small",
-				"Default": "",
-				"Large": "large"
-			}
 		},
 		"css": {
 			"label": "CSS",
@@ -74,8 +42,6 @@
 				{
 					"title": "Settings",
 					"fields": [
-						"button_style",
-						"button_size",
 						"css"
 					]
 				}

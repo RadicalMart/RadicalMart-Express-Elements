@@ -13,6 +13,7 @@ namespace YOOtheme;
 
 defined('_JEXEC') or die;
 
+use Joomla\Component\RadicalMartExpress\Site\Helper\CheckoutHelper;
 use Joomla\Component\RadicalMartExpress\Site\Helper\ProductsHelper;
 
 return [
@@ -21,6 +22,13 @@ return [
 
 			$node->product = ($pk = (int) trim($node->props['product']))
 				? ProductsHelper::getProduct('com_radicalmart.shortcode', $pk) : false;
+
+			$node->data = [];
+			if ($node->product)
+			{
+				$node->layoutData = CheckoutHelper::getBlankFormData('com_radicalmart_express.shortcode',
+					$node->product->id);
+			}
 
 			return true;
 		}

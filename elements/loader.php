@@ -1,10 +1,10 @@
 <?php
 /*
- * @package     RadicalMart Express Package
+ * @package     RadicalMart Express - YOOtheme Elements Plugin
  * @subpackage  plg_system_radicalmart_express_elements
- * @version     1.0.0
+ * @version     __DEPLOY_VERSION__
  * @author      Delo Design - delo-design.ru
- * @copyright   Copyright (c) 2021 Delo Design. All rights reserved.
+ * @copyright   Copyright (c) 2023 Delo Design. All rights reserved.
  * @license     GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
  * @link        https://delo-design.ru/
  */
@@ -17,7 +17,7 @@ use YOOtheme\Path;
 return [
 	'extend' => [
 		Builder::class => function (Builder $builder) {
-			$builder->addTypePath(Path::get(__DIR__ . '/elements/*/element.json'));
+			$builder->addTypePath(Path::get(__DIR__ . '/*/element.json'));
 		}
 	]
 ];
