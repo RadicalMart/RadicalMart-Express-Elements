@@ -20,10 +20,10 @@ return [
 	'transforms' => [
 		'render' => function ($node) {
 
-			$node->product = ($pk = (int) trim($node->props['product']))
+			$pk            = (!empty($node->props['product'])) ? (int) trim($node->props['product']) : 0;
+			$node->product = ($pk > 0)
 				? ProductsHelper::getProduct('com_radicalmart.shortcode', $pk) : false;
 
-			$node->data = [];
 			if ($node->product)
 			{
 				$node->layoutData = CheckoutHelper::getBlankFormData('com_radicalmart_express.shortcode',
