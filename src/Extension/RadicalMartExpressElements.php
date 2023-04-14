@@ -2,7 +2,7 @@
 /*
  * @package     RadicalMart Shipping Standard Plugin
  * @subpackage  plg_radicalmart_shipping_standard
- * @version     __DEPLOY_VERSION__
+ * @version     2.0.0
  * @author      Delo Design - delo-design.ru
  * @copyright   Copyright (c) 2022 Delo Design. All rights reserved.
  * @license     GNU/GPL license: https://www.gnu.org/copyleft/gpl.html
@@ -24,7 +24,7 @@ class RadicalMartExpressElements extends CMSPlugin implements SubscriberInterfac
 	 *
 	 * @var    bool
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  2.0.0
 	 */
 	protected $autoloadLanguage = true;
 
@@ -33,7 +33,7 @@ class RadicalMartExpressElements extends CMSPlugin implements SubscriberInterfac
 	 *
 	 * @var  \Joomla\CMS\Application\CMSApplication
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  2.0.0
 	 */
 	protected $app = null;
 
@@ -42,7 +42,7 @@ class RadicalMartExpressElements extends CMSPlugin implements SubscriberInterfac
 	 *
 	 * @return  array
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   2.0.0
 	 */
 	public static function getSubscribedEvents(): array
 	{
@@ -54,7 +54,7 @@ class RadicalMartExpressElements extends CMSPlugin implements SubscriberInterfac
 	/**
 	 * Method to add custom elements loader.
 	 *
-	 * @since  __DEPLOY_VERSION__
+	 * @since  2.0.0
 	 */
 	public function onAfterInitialise()
 	{
